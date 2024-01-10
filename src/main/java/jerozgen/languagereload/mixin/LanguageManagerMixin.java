@@ -35,7 +35,6 @@ abstract class LanguageManagerMixin {
             target = "Ljava/util/Map;getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"))
     void onReload$setSystemLanguage(ResourceManager manager, CallbackInfo ci) {
         if (LanguageReload.shouldSetSystemLanguage) {
-            LanguageReload.shouldSetSystemLanguage = false;
             LanguageReload.LOGGER.info("Language is not set. Setting it to system language");
 
             var locale = Locale.getDefault();
